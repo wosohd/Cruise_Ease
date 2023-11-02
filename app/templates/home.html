@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+
+{% block head %}
+
+<!-- link css stylesheet -->
+<link rel="stylesheet" href="{{ url_for() }}">
+
+ <section class="home" id="home">
+        <div class="txt">
+            <h1>Looking to rent a car ,try CruiseEase</h1>
+            <p>Smooth sailing starts here: Your Voyage, Your way</p>
+            <div class="app-stores">
+                <img src="{{ url_for()}}" alt="">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </div>
+
+{% endblock content %}

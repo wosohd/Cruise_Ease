@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block head %}
+    <!-- link css stylesheet -->
+    <link rel="stylesheet" href="{{ url_for() }}">
+
+{% endblock %}
+{% block content %}
+    <div class="gallery">
+        <a href="{{ url_for('view') }}?year=2016&makemodel=Honda Civic&price=900" onclick="getr34()">
+            <div class="inventory civic">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+        <a href="{{ url_for('checkout') }}?year=2019&makemodel=Subaru WRX&price=1000">
+            <div class="inventory sub">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+        <a href="{{ url_for('checkout') }}?year=2019&makemodel=Mercedes Benz&price=1000">
+            <div class="inventory benz">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+        <a href="{{ url_for('checkout') }}?year=2018&makemodel=Jeep wrangler&price=1200">
+            <div class="inventory jeep">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+        <a href="{{ url_for('checkout') }}?year=2023&makemodel=Volvo XC40&price=1500">
+            <div class="inventory XC40">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+        <a href="{{ url_for('checkout') }}?year=2016&makemodel=LamboSporty X8&price=900">
+            <div class="inventory X8">
+                <img src="{{ url_for()}}" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="rental_message">
+        <h1> From our top dealers around the world </h1>
+    </div>
+
+{% endblock %}
