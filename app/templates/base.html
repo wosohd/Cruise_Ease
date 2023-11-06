@@ -13,7 +13,7 @@
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!-- link css stylesheet -->
-    <link rel="stylesheet" href="{{ url_for() }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
 
     <!-- conditional using blocks for page title -->
     {% if title %}
@@ -29,7 +29,7 @@
     <!-- div class banner holds all css/html for navbar, logo, and background-->
     <div class="banner">
         <div class="navbar">
-            <img src="{{ url_for()}}" class="logo">
+            <img src="{{ url_for(('static', filename='images/logo.jpeg')) }}" class="logo">
             <div class="CruiseEase">
                 <h1>Cruise Ease</h1>
             </div>
