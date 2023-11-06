@@ -9,5 +9,3 @@ CruiseEase is a user-friendly web application designed to streamline your cruise
 - User Accounts
 - Real-time Updates
 - Responsive Design
-
-Get started quickly with our easy installation process and enjoy hassle-free cruise planning.
