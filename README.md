@@ -1,6 +1,6 @@
 # CruiseEase - Simplify Your Cruise Planning
 # Introduction
-CruiseEase is a user-friendly web application designed to streamline your cruise vacation planning. With a Python Flask backend and a Node.js frontend utilizing HTML, CSS, and JavaScript, CruiseEase offers an intuitive interface for exploring various cruise options, creating personalized itineraries, and accessing real-time pricing information. Users can create accounts to save preferences and itineraries. CruiseEase's responsive design ensures accessibility on both desktop and mobile devices. Start planning your dream cruise today with CruiseEase!
+CruiseEase is a user-friendly web application designed to streamline your cruise vacation planning. With a Python Flask backend and a Bootstrap frontend utilizing HTML and CSS, CruiseEase offers an intuitive interface for exploring various cruise options, creating personalized itineraries, and accessing real-time pricing information. Users can create accounts to save preferences and itineraries. CruiseEase's responsive design ensures accessibility on both desktop and mobile devices. Start planning your dream cruise today with CruiseEase!
 # Links
 - [Deployed site]
 - (https://aririwosoh.hashnode.dev/cruising-through-code-navigating-challenges-and-triumphs-in-developing-cruise-ease) [Blogpost]
@@ -22,7 +22,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/CruiseEase.git
-   cd CruiseEase
+   cd Cruise_Ease
    ```
 
 2. **Create Virtual Environment:**
@@ -47,7 +47,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 
 5. **Run the Application:**
    ```bash
-   python cruise_ease.py
+   python Cruise_Ease.py
    ```
 
 6. **Visit the following URL in your browser:**
@@ -57,3 +57,60 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 
 Now, Cruise Ease, powered by Flask, should be up and running locally on your machine. Customize and enhance the application to suit your preferences!
 
+# Cruise Ease Usage Guide
+
+## Getting Started
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/CruiseEase.git
+   cd Cruise_Ease
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Application:**
+   ```bash
+   python Cruise_Ease.py
+   ```
+
+4. **Visit the following URL in your browser:**
+   ```
+   http://localhost:5000
+   ```
+
+## Features
+
+- **Renting a Car:**
+  - Navigate to the "Rent a Car" section.
+  - Select your preferred vehicle, rental dates, and other options.
+  - Complete the booking process with ease.
+
+- **Responsive Design:**
+  - Cruise Ease is designed to work seamlessly across various devices.
+  - Enjoy a consistent and user-friendly experience on desktops, tablets, and mobile devices.
+
+- **Diverse Fleet:**
+  - Explore a diverse selection of vehicles to suit your travel needs.
+  - From compact cars to spacious SUVs, Cruise Ease offers a range of options.
+
+## Customization
+
+- **Modify Styles:**
+  - Customize the styling by editing CSS files in the `static/css` directory.
+  - Tailor the visuals to align with your preferences.
+
+- **Extend Functionality:**
+  - Explore the Flask app's logic in `cruise_ease.py` to extend or modify functionalities.
+  - Add new features to enhance the application's capabilities.
+
+## Contributions
+
+Contributions are welcome! Feel free to submit issues or pull requests to improve Cruise Ease. I appreciate your input in making this car rental platform even better!
+
+# Related Projects
+Explore these additional projects on GitHub that complement or share similarities with Cruise Ease:
+- (https://github.com/trevoirwilliams/CarRentalManagement-Blazor-WASM)
