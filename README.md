@@ -27,7 +27,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 
 2. **Create Virtual Environment:**
    ```bash
-   python -m venv venv
+   python -m venv env
    ```
 
 3. **Activate Virtual Environment:**
@@ -47,7 +47,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 
 5. **Run the Application:**
    ```bash
-   python Cruise_Ease.py
+   Flask run --debug
    ```
 
 6. **Visit the following URL in your browser:**
@@ -74,7 +74,7 @@ Now, Cruise Ease, powered by Flask, should be up and running locally on your mac
 
 3. **Run the Application:**
    ```bash
-   python Cruise_Ease.py
+   Flask run --debug
    ```
 
 4. **Visit the following URL in your browser:**
