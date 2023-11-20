@@ -47,13 +47,13 @@ class UpdateAccountForm(FlaskForm):
                 raise ValidationError('Username already in use')
 
         def validate_email(self, email):
-        if email.data != current_user.email:
-            user = User.query.filter_by(email=email.data).first()
+            if email.data != current_user.email:
+                user = User.query.filter_by(email=email.data).first()
             if user:
                 raise ValidationError('Email is already in use')
 
 #View form class
-class ViewForm(FlaskForm):
+class ServicesForm(FlaskForm):
     year = IntegerField('Year', validators=[DataRequired(), NumberRange(min=1990, max=2022)])
     makemodel = StringField('Make/Model', validators=[DataRequired()])
     price = StringField('Total Cost', validators=[DataRequired()])

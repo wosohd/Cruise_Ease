@@ -1,11 +1,37 @@
 {% extends "base.html"%}
 {% block content %}
-<div class="about">
-    <h1>Get to know about us</h1>
-    <p>CruiseEase, your key to hassle-free travels! We're not just a car rental app; we're your road trip companions.
-    With a tap, unlock a world of wheels, from sleek city cruisers to rugged adventures. We're your trusty GPS, leading
-    you to hidden gems and scenic routes. Say goodbye to roadblock stress and hello to memorable journeys. CruiseEase,
-    where the open road becomes your playground. Start your engines and drive your dreams today!</p>
+<div class="heading">
+    <span>About Us</span>
+    <h1>Get to Know Us</h1>
+</div>
+<div class="about-container">
+    <div class="about-img">
+        <img src="{{ url_for('static', filename='images/about.png')}}" alt="">
+    </div>
+    <div class="about-text">
+        <span>About us</span>
+        <p>CruiseEase, your key to hassle-free travels! We're not just a car rental app; we're your road trip companions.
+            With a tap, unlock a world of wheels, from sleek city cruisers to rugged adventures. We're your trusty GPS, leading
+            you to hidden gems and scenic routes. Say goodbye to roadblock stress and hello to memorable journeys. CruiseEase,
+            where the open road becomes your playground. Start your engines and drive your dreams today!</p>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+</div>
+<!--Newsletter-->
+<section class="newsletter">
+    <h2>Subscribe To Newsletter</h2>
+    <div class="box">
+        <input type="text" placeholder="Enter Your Email...">
+        <a href="#" class="btn">Subscribe</a>
+    </div>
+</section>
+<div class="copyright">
+    <p>&#169; CruiseEase All Rights Reserved</p>
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+    </div>
 </div>
 {% endblock content %}
 

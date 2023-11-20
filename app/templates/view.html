@@ -1,111 +1,93 @@
 {% extends "base.html" %}
+{% block head %}
+    <!-- link css stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/view.css') }}">
+
+{% endblock %}
 {% block content %}
-<div class="content-section">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        <fieldset class="form-group">
-            <legend class="border-bottm mb-1" style="color:#FF0000">Checkout Now</legend>
-            <!-- start of form fields -->
-
-            <!-- password field with form_group -->
-            <div class="form_group">
-                {{ form.year.label(class="form-control-label") }}
-                {% if form.year.errors %}
-                    {{ form.year(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.year.errors %}
-                            {% print error %}
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.year(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-
-            <!-- password field with form_group -->
-            <div class="form_group">
-                {{ form.makemodel.label(class="form-control-label") }}
-                {% if form.makemodel.errors %}
-                    {{ form.makemodel(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.makemodel.errors %}
-                            {% print error %}
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.makemodel(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-
-            <!-- password field with form_group -->
-            <div class="form_group">
-                {{ form.price.label(class="form-control-label") }}
-                {% if form.price.errors %}
-                    {{ form.price(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.price.errors %}
-                            {% print error %}
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.price(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-
-            <!-- creditcard field with form_group -->
-            <div class="form_group">
-              {{ form.creditcard.label(class="form-control-label") }}
-              {% if form.creditcard.errors %}
-                  {{ form.creditcard(class="form-control form-control-lg is-invalid") }}
-                  <div class="invalid-feedback">
-                      {% for error in form.creditcard.errors %}
-                          {% print error %}
-                      {% endfor %}
-                  </div>
-              {% else %}
-                  {{ form.creditcard(class="form-control form-control-lg") }}
-              {% endif %}
-            </div>
-
-            <!-- datetime field with form_group -->
-            <div class="form_group">
-
-                <!-- start date field -->
-                {{ form.startdate.label(class="form-control-label")}}
-                {% if form.startdate.errors %}
-                    {{ form.startdate(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.startdate.errors %}
-                            {% print error %}
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.startdate(class="form-control form-control-lg") }}
-                {% endif %}
-
-                <!-- end date field -->
-                {{ form.enddate.label(class="form-control-label") }}
-                {% if form.enddate.errors %}
-                    {{ form.enddate(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.enddate.errors %}
-                            {% print error %}
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.enddate(class="form-control form-control-lg") }}
-                {% endif %}
-
-            </div> <br>
-
-        <!-- end of form fields -->
-
-        </fieldset>
-
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-danger")}}
+    <div class="heading">
+        <span>View</span>
+        <h1>From top dealers around the world</h1>
+    </div>
+<div class="view-container">
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car1.jpg')}}" alt="">
         </div>
+        <p>2023</p>
+        <h3>2018 Honda Civic</h3>
+        <h2>$900 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2018&makemodel=Honda Civic&price=900" class="btn">Hire Now</a>  
+    </div>
 
-    </form>
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car2.jpeg')}}" alt="">
+        </div>
+        <p>2023</p>
+        <h3>Subaru WRX</h3>
+        <h2>$950 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2019&makemodel=Subaru WRX&price=950" class="btn">Hire Now</a>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car3.jpeg')}}" alt="">
+        </div>
+        <p>2023</p>
+        <h3>2018 Mercedes Benz</h3>
+        <h2>$1000 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2019&makemodel=Mercedes Benz&price=1000" class="btn">Hire Now</a>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car4.jpeg')}}" alt="">
+        </div>
+        <p>2023</p>
+        <h3>Jeep Wrangler</h3>
+        <h2>$1100 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2019&makemodel=Jeep Wrangler&price=1100" class="btn">Hire Now</a>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car5.jpeg')}}" alt="">
+        </div>
+        <p>2023</p>
+        <h3>Volvo XC40</h3>
+        <h2>$1200 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2023&makemodel=Volvo XC40&price=1500" class="btn">Hire Now</a>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="{{ url_for('static', filename='images/car6.jpg')}}" alt="">
+        </div>
+        <p>2023</p>
+        <h3>SPORTX90</h3>
+        <h2>$900 <span>/month</span></h2>
+        <a href="{{ url_for('services') }}?year=2019&makemodel=SPORTX90&price=900" class="btn">Hire Now</a>
+    </div>
+
+    <div class="box">
+           <div class="box-img">
+               <img src="{{ url_for('static', filename='images/car7.jpeg')}}" alt="">
+           </div>
+           <p>2023</p>
+           <h3>Chevrolet Camaro</h3>
+           <h2>$1150 <span>/month</span></h2>
+           <a href="{{ url_for('services') }}?year=2024&makemodel=Chevrolet Camaro&price=1150" class="btn">Hire Now</a>
+       </div>
+
+       <div class="box">
+           <div class="box-img">
+               <img src="{{ url_for('static', filename='images/car8.jpeg')}}" alt="">
+           </div>
+           <p>2023</p>
+           <h3>Ford Mustang GT</h3>
+           <h2>$1200 <span>/month</span></h2>
+           <a href="{{ url_for('services') }}?year=2023&makemodel=Ford Mustang GT&price=1200" class="btn">Hire Now</a>
+       </div>
 </div>
-{% endblock content %}
+{% endblock %}

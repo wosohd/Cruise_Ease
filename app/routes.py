@@ -1,8 +1,8 @@
 import secrets, os
 from PIL import Image
-from app import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-from app.forms import ViewForm, RegistrationForm, LoginForm, UpdateAccountForm
+from app.forms import ServicesForm, RegistrationForm, LoginForm, UpdateAccountForm
 from app.models import User, Rental
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -17,10 +17,10 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-#route declarator for services page
-@app.route("/services")
-def collection():
-    return render_template('services.html', title='Services')
+#route declarator for view page
+@app.route("/view")
+def view():
+    return render_template('view.html', title='view')
 
 #route declarator for register page
 @app.route("/register", methods=['GET', 'POST'])
@@ -103,15 +103,15 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-#route declarator for view page
-@app.route("/view", methods=['GET', 'POST'])
+#route declarator for services page
+@app.route("/services", methods=['GET', 'POST'])
 @login_required
-def view():
-    form = viewForm()
+def services():
+    form = ServicesForm()
     if form.validate_on_submit():
         if current_user.rental:
             flash('You can only rent one car at a time', 'danger')
-            return redirect(url_for('services'))
+            return redirect(url_for('view'))
         else:
             rental = Rental(year=form.year.data, makemodel=form.makemodel.data,
                             startdate=form.startdate.data, enddate=form.enddate.data,
@@ -119,7 +119,7 @@ def view():
             db.session.add(rental)
             db.session.commit()
             flash('Payment approved!', 'success')
-            return redirect(url_for('services'))
+            return redirect(url_for('view'))
     elif request.method == 'GET':
         year = request.args.get('year')
         makemodel = request.args.get('makemodel')
@@ -127,4 +127,4 @@ def view():
         form.year.data = year
         form.makemodel.data = makemodel
         form.price.data = '$' + price + ' per day plus $30 per mile'
-    return render_template('view.html', title='Profile', form=form)
+    return render_template('services.html', title='Profile', form=form)

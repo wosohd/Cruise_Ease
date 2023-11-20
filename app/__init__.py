@@ -6,7 +6,7 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
-
+app.config['SECRET_KEY'] = 'wosohd23456728'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
