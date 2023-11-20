@@ -2,7 +2,7 @@
 # Introduction
 CruiseEase is a user-friendly web application designed to streamline your cruise vacation planning. With a Python Flask backend and a Bootstrap frontend utilizing HTML and CSS, CruiseEase offers an intuitive interface for exploring various cruise options, creating personalized itineraries, and accessing real-time pricing information. Users can create accounts to save preferences and itineraries. CruiseEase's responsive design ensures accessibility on both desktop and mobile devices. Start planning your dream cruise today with CruiseEase!
 # Links
-- [Deployed site]
+- [Deployed site by Flask: Follow Installation Guide]
 - (https://aririwosoh.hashnode.dev/cruising-through-code-navigating-challenges-and-triumphs-in-developing-cruise-ease) [Blogpost]
 - (https://www.linkedin.com/in/dwight-ariri-736913293/) [Linkein]
 
@@ -21,7 +21,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/CruiseEase.git
+   git clone https://github.com/yourusername/Cruise_Ease.git
    cd Cruise_Ease
    ```
 
@@ -33,7 +33,7 @@ Before installing Cruise Ease, ensure you have the following prerequisites insta
 3. **Activate Virtual Environment:**
    - **For Windows:**
      ```bash
-     .\venv\Scripts\activate
+     .venv\Scripts\activate
      ```
    - **For macOS/Linux:**
      ```bash
@@ -63,7 +63,7 @@ Now, Cruise Ease, powered by Flask, should be up and running locally on your mac
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/CruiseEase.git
+   git clone https://github.com/yourusername/Cruise_Ease.git
    cd Cruise_Ease
    ```
 
@@ -88,10 +88,9 @@ Now, Cruise Ease, powered by Flask, should be up and running locally on your mac
   - Navigate to the "Rent a Car" section.
   - Select your preferred vehicle, rental dates, and other options.
   - Complete the booking process with ease.
-
-- **Responsive Design:**
-  - Cruise Ease is designed to work seamlessly across various devices.
-  - Enjoy a consistent and user-friendly experience on desktops, tablets, and mobile devices.
+  - 
+  - **Bcrypt Security Feature:**
+  - Cruise Ease employs the bcrypt hashing algorithm in Flask to fortify password protection. This feature ensures passwords are securely stored, using a strong, slow, and adaptive hashing process. It enhances data privacy, defending against unauthorized access and reinforcing the overall security of user accounts.
 
 - **Diverse Fleet:**
   - Explore a diverse selection of vehicles to suit your travel needs.
