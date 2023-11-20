@@ -143,6 +143,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+# Technical Personal Detail
+Cruise Ease is more than a project; it's my personal journey from traveler to developer. The commitment to transparency, diverse options, and a seamless booking experience reflects my own desires as a consumer. This platform is a testament to the power of education and passion, transforming a frustration into a solution that I believe will redefine how we explore the world. Cruise Ease is not just a project for Alx; it's my dedication to making travel easy and enjoyable for everyone.
+
 # App Screenshots
 Above in a folder named CE Screenshots provides actual interface of the web application Cruise_Ease.
 
